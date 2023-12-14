@@ -12,7 +12,7 @@ async function lucroDiario() {
     const data = document.querySelector("#data")
     //pega a venda do dia da data
     const resVenda = await fetch(
-        `https://server-n7iu.onrender.com/vendas?data=${data.value}`)
+        `https://server-n7iu.onrender.com/vendas?data=${data.value}/`)
 
     if (resVenda.status == 200) {
         const resJson = await resVenda.json()
@@ -21,7 +21,7 @@ async function lucroDiario() {
         
         console.log(resJson[i])
         const resProdutos = await fetch(
-            `https://server-n7iu.onrender.com/produtos?id=${resJson[i].idProduto}`
+            `https://server-n7iu.onrender.com/produtos?id=${resJson[i].idProduto}/`
         )
         const resProd = await resProdutos.json()
         console.log(resProd)
