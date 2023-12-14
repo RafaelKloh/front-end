@@ -15,7 +15,7 @@ async function register(){
     const btn = document.querySelector("#register-submit")
    
     const bodyJson = JSON.stringify(user)
-    const res = await fetch("http://localhost:3001/users",{
+    const res = await fetch("https://server-n7iu.onrender.com/users",{
         headers:myHeaders, 
         method:"POST",
         body:bodyJson

@@ -21,7 +21,7 @@ async function register() {
     console.log(produtos)
     const bodyJson = JSON.stringify(produtos)
     const res = await fetch(
-        "http://localhost:3001/produtos",
+        "https://server-n7iu.onrender.com/produtos",
         {
             headers: myHeaders,
             method: "POST",

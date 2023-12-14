@@ -1,5 +1,5 @@
 async function getPRodutos() {
-    const response = await fetch("http://localhost:3001/produtos")
+    const response = await fetch("https://server-n7iu.onrender.com/produtos")
     const produtos = await response.json()
     console.log(produtos)
     options(produtos)
@@ -44,7 +44,7 @@ async function cadastrarVenda() {
     }
     const bodyJson = JSON.stringify(vendas)
     const res = await fetch(
-        "http://localhost:3001/vendas",
+        "https://server-n7iu.onrender.com/vendas",
         {
             headers: myHeaders,
             method: "POST",

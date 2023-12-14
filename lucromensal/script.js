@@ -10,7 +10,7 @@ form.addEventListener("submit", (event) => {
 async function lucroMensal() {
     const data = document.querySelector("#mes")
     const resVenda = await fetch(
-        `http://localhost:3001/vendas?mes=${data.value}`)
+        `https://server-n7iu.onrender.com/vendas?mes=${data.value}`)
 
     if (resVenda.status == 200) {
         const resJson = await resVenda.json()
@@ -24,7 +24,7 @@ async function lucroMensal() {
 
             console.log(resJson[i])
             const resProdutos = await fetch(
-                `http://localhost:3001/produtos?id=${resJson[i].idProduto}`
+                `https://server-n7iu.onrender.com/produtos?id=${resJson[i].idProduto}`
             )
             const resProd = await resProdutos.json()
             console.log(resProd)
