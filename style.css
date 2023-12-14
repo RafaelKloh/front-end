@@ -36,6 +36,7 @@ main{
     border-radius: 16px;
     gap: 16px;
     box-shadow: 8px 8px 6px 3px black;
+    
 }
 main section, main form{
     width: 50%;
@@ -137,6 +138,7 @@ main form button:disabled{
     background-color: #242222;
     transform: scale(1);
 }
+
 @keyframes toastAnimation{
     0%,100%{
         position: fixed;

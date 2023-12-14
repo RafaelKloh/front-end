@@ -31,12 +31,16 @@ async function cadastrarVenda() {
     console.log(select.value)
     const quantidade = document.querySelector("#qtd")
     const data = document.querySelector("#data")
+    const mes = data.value.substr(5, 2)
+    console.log(data.value)
+    console.log(mes)
     const timeStamp = new Date().getTime()
     const vendas = {
         id: timeStamp,
         idProduto: select.value,
         quantidade: quantidade.value,
-        data:data.value
+        data:data.value,
+        mes:mes
     }
     const bodyJson = JSON.stringify(vendas)
     const res = await fetch(
